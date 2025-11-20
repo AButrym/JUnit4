@@ -2,6 +2,7 @@ package com.softserve.edu
 
 import com.softserve.edu.service.Calc
 import com.softserve.edu.service.CalcFilter
+import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.MockK
 import io.mockk.impl.annotations.RelaxedMockK
@@ -16,6 +17,9 @@ class CalcFilter2Test {
 
     @get:Rule
     val mockkRule = MockKRule(this)
+//    init {
+//        MockKAnnotations.init(this, relaxUnitFun = true)
+//    }
 
     @MockK
     lateinit var game1: Game

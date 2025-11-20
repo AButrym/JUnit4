@@ -17,7 +17,11 @@ import org.junit.Test
 
 class CalcFilter1Test {
 
-    @MockK
+//    init {
+//        MockKAnnotations.init(this, relaxUnitFun = true)
+//    }
+
+    @MockK(relaxed = true)
     lateinit var calc1: Calc
 
     @RelaxedMockK
